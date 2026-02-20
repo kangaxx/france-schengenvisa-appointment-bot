@@ -24,6 +24,40 @@ Ensure Python 3.7+ is installed. Then install required dependencies:
 pip install selenium-wire undetected-chromedriver fake-useragent numpy
 ```
 
+## 🍎 macOS Version (separate file)
+
+The original script `bot.py` is kept as-is. For macOS, use:
+
+```bash
+python bot_macos.py
+```
+
+Before running, export TLS account credentials:
+
+```bash
+export TLS_USERNAME="your_tls_username"
+export TLS_PASSWORD="your_tls_password"
+```
+
+Or generate an env file with the helper script:
+
+```bash
+bash setup_env.sh
+source .bot_env.sh
+```
+
+Optional VPN toggle for `bot_macos.py`:
+
+```bash
+# default behavior: run main task without Windscribe
+export USE_VPN=false
+
+# enable Windscribe VPN rotation
+export USE_VPN=true
+```
+
+The macOS script will try to locate Windscribe CLI automatically from common paths (`windscribe`, `windscribe-cli`, `/Applications/...`, Homebrew paths).
+
 ## 🔧 Windscribe Setup (Optional)
 
     Download and install Windscribe CLI from https://windscribe.com/download
